@@ -4,8 +4,8 @@ import RepositoryItem from './RepositoryItem';
 const styles = StyleSheet.create({
   separator: {
     height: 10,
-    borderColor: "red",
-    borderWidth: 1
+    // borderColor: "red",
+    // borderWidth: 1
   },
 });
 
@@ -69,7 +69,7 @@ const RepositoryList = () => {
       stargazersCount={item.stargazersCount}
       ratingAverage={item.ratingAverage}
       reviewCount={item.reviewCount}
-      ownerAvatarUrl={item.ownerAvatarUrl}
+      picUrl={item.ownerAvatarUrl}
     />
   );
 

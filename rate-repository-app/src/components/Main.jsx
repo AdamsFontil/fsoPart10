@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import RepositoryList from './RepositoryList';
-import AppBarTab from './AppBarTab';
+import RepositoryList from './Regular/RepositoryList';
+import AppBarTab from './Regular/AppBarTab';
 import themes from '../themes/themes';
 import { Route, Routes, Navigate } from 'react-router-native';
-import SignIn from './SignIn';
+import SignIn from './FormComponents/SignIn';
 
 const styles = StyleSheet.create ({
   mainColor: {
-    backgroundColor: themes.colors.mainColor
+    backgroundColor: themes.colors.grey
 
   }
 })

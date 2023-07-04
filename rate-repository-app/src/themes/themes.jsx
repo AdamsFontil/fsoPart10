@@ -2,9 +2,10 @@ const theme = {
   colors: {
     textPrimary: '#24292e',
     textSecondary: '#586069',
-    primary: '#0366d6',
+    primary: '#0366d6', // blue
     background: '#24292e',
-    mainColor: '#e1e4e8'
+    mainColor: '#e1e4e8',
+    grey: '#747678'
   },
   fontSizes: {
     body: 14,

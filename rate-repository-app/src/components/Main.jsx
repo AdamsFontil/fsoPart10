@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import RepositoryList from './Regular/RepositoryList';
 import AppBarTab from './Regular/AppBarTab';
-import themes from '../themes/themes';
+import themes from './themes/themes';
 import { Route, Routes, Navigate } from 'react-router-native';
 import SignIn from './FormComponents/SignIn';
 

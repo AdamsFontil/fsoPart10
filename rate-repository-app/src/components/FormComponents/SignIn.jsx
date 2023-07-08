@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import SignInForm from "./SignInForm";
-import themes from '../../themes/themes';
+// import themes from '../../themes/themes';
 
 const styles = StyleSheet.create ({
   container: {

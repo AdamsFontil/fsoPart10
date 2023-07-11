@@ -1,4 +1,6 @@
-{
+import 'dotenv/config';
+// import '.env'
+export default {
   "expo": {
     "name": "rate-repository-app",
     "slug": "rate-repository-app",
@@ -32,6 +34,10 @@
     "overrides": {
       "react-devtools-core": "~4.25.0"
     },
-    "sdkVersion": "47.0.0"
+    "sdkVersion": "47.0.0",
+    "extra": {
+      "env": process.env.ENV,
+      "uri": process.env.APOLLO_URI
+    }
   }
 }

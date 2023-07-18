@@ -1,38 +1,20 @@
 import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import Constants from 'expo-constants';
 
-import { setContext } from '@apollo/client/link/context';
+console.log('uri---', Constants.manifest.extra.uri)
 
-// You might need to change this depending on how you have configured the Apollo Server's URI
-const { apolloUri } = Constants.manifest.extra.uri;
-
+// uri: Constants.manifest.extra.uri
 const httpLink = createHttpLink({
-  uri: apolloUri,
-  fetchPolicy: 'network-only',
+  // Replace the IP address part with your own IP address!
+  uri: Constants.manifest.extra.uri
+
 });
 
-
-const createApolloClient = (authStorage) => {
-  const authLink = setContext(async (_, { headers }) => {
-    try {
-      const accessToken = await authStorage.getAccessToken();
-      return {
-        headers: {
-          ...headers,
-          authorization: accessToken ? `Bearer ${accessToken}` : '',
-        },
-      };
-    } catch (e) {
-      console.log(e);
-      return {
-        headers,
-      };
-    }
-  });
+const createApolloClient = () => {
   return new ApolloClient({
-    link: authLink.concat(httpLink),
+    link: httpLink,
     cache: new InMemoryCache(),
+    fetchPolicy: 'cache-and-network'
   });
 };
-
 export default createApolloClient;
